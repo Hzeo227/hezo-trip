@@ -20,7 +20,7 @@ const itemClick = (index, item) => {
       <template v-for="(item, index) of tabbarData">
         <van-tabbar-item :to="item.path">
           <span>{{ item.text }}</span>
-          <template #icon="props">
+          <template #icon>
             <img :src="currentIndex !== index ? getAssetURL(item.image) : getAssetURL(item.imageActive)" />
           </template>
         </van-tabbar-item>
